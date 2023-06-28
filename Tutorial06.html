@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tutorial 06</title>
+    <style>
+        .correct {
+            color: green;
+        }
+        
+        .incorrect {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>A Simple Maths Game</h1>
+    <p>
+        <strong>Question 1 :</strong>
+        <span id="question1"> </span>
+        <span id="answer1"></span>
+        <span id="feedback1"></span>
+
+    </p>
+
+
+    <script>
+        let correct1 = 110;
+        let x1 = 50; //create a variable and assign
+        let y1 = 60;
+        let Q1 = x1 + " +" + " " + y1; //concatanation
+        let input1 = prompt(Q1); //passing the string to display for the user, assigning the user input to the varible and assign it tot the prompt(Q1)
+
+        document.getElementById("answer1").innerHTML = input1;
+        document.getElementById("question1").innerHTML = Q1;
+
+        let dom1 = document.getElementById("feedback1");
+        if (correct1 === parseInt(input1)) {
+            dom1.innerHTML = '&checkmark;';
+            dom1.classList.add("correct");
+            //document.getElementById("feedback1").style.color = "purple";
+
+        } else {
+            dom1.innerHTML = '&cross; The correct answer is 110';
+            dom1.classList.add("incorrect");
+            //document.getElementById("feedback1").style.color = "brown";
+
+        }
+    </script>
+</body>
+
+</html>
